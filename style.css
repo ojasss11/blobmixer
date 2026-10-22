@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0.85rem 1.75rem;
+  padding-top: calc(0.85rem + env(safe-area-inset-top));
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(83, 0, 177, 0.28) 0%,
+    rgba(157, 115, 247, 0.12) 100%
+  );
+  border-bottom: 1px solid rgba(157, 115, 247, 0.38);
+  box-shadow: 0 8px 32px rgba(83, 0, 177, 0.18);
+  backdrop-filter: blur(18px) saturate(1.5);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5);
+  pointer-events: none;
+  user-select: none;
+}
+
+.logo {
+  color: #fff;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.logo:hover {
+  color: #efe8ff;
+  text-shadow: 0 0 16px rgba(157, 115, 247, 0.85);
+}
+
+.logo:focus-visible {
+  outline: 2px solid #c9b3ff;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.site-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0.7rem 1rem;
+  padding-bottom: calc(0.7rem + env(safe-area-inset-bottom));
+  background: #5300b1;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.site-footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(0.68rem, 2.4vw, 0.78rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.site-footer a {
+  display: inline-flex;
+  color: #fff;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.site-footer svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
+}
+
+.site-footer a:hover {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+}
+
+.site-footer a:focus-visible {
+  outline: 2px solid #c9b3ff;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
